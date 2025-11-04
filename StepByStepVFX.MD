@@ -10,8 +10,8 @@ By the end of this tutorial you will know:
 ## Step 1 Set-up:
 If you haven't yet, clone the URP Workshop repository.  
 Navigate to Assets/Prefabs/Faucet and open it.  
-You will see a simple, static and mundane faucet. We will want to make this faucet leaky through the power of visual effects, we will create a visual effect that causes droplets to drip from the tip of this faucet.
-Notice the "Leaky Visual" object, this empty object has a "Visual effect" component that will contain our drip visual effect. It's "asset template" attribute is currently empty.
+You will see a simple, static and mundane faucet. We will want to make this faucet leaky through the power of visual effects, we will create a visual effect that causes droplets to drip from the tip of this faucet.  
+Notice the "Leaky Visual" object, this empty object has a "Visual effect" component that will contain our drip visual effect. It's "asset template" attribute is currently empty.  
 ## Step 2 Creating the visual effect asset:
 Navigate to Assets/VFX and through the Create menu, click on "Create Visual effects -> Visual effect graph".
 You will see a list of default templates, but for the sake of this tutorial we will select "Minimal System".
