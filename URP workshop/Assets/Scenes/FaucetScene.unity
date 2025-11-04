@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4180772363940502045, guid: 9749d980473009478b02c329539bd091, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Value.y
-      value: -4.959779
+      value: -4.0252657
       objectReference: {fileID: 0}
     - target: {fileID: 4180772363940502045, guid: 9749d980473009478b02c329539bd091, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[1].m_Overridden
