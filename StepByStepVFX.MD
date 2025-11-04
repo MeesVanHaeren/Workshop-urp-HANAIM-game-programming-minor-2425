@@ -11,7 +11,7 @@ By the end of this tutorial you will know:
 If you haven't yet, clone the URP Workshop repository.  
 Navigate to Assets/Prefabs/Faucet and open it.  
 You will see a simple, static and mundane faucet. We will want to make this faucet leaky through the power of visual effects, we will create a visual effect that causes droplets to drip from the tip of this faucet.  
-Notice the "Leaky Visual" object, this empty object has a "Visual effect" component that will contain our drip visual effect. It's "asset template" attribute is currently empty.  
+Notice the "Leaky Visual" object in the object hierarchy, this object has a "Visual effect" component that will contain our drip visual effect. It's "asset template" attribute is currently empty.  
 ## Step 2 Creating the visual effect asset:
 Navigate to Assets/VFX and through the Create menu, click on "Create Visual effects -> Visual effect graph".  
 You will see a list of default templates, but for the sake of this tutorial we will select "Minimal System".  
@@ -50,11 +50,11 @@ In our initialise particle context, let's add a block called "Lifetime" and let'
 Our particle now looks how we'd want it to! But there are still things to be tweaked.  
 ## Step 4 Using properties:
 If we open a scene with the faucet in it, like Scenes/FaucetScene, we'll see that our particles are completely unbothered by the environment. This is not good.  
-We'd like our particles to despawn when they hit the sink, but this is actually more difficult than you might expect. We'll need to do this through a shortcut like lowering the lifetime or adding a killplane, but we'd want this to look right for all three faucet tables. We can do this through properties.  
-A visual effect's property is similar to a serialised field in a script. It can be a different value for every instance of the effect and can therefore be used to differentiate our effects for our different faucets.  
+We'd like our particles to despawn when they hit the table, but this is actually more difficult than you might expect. We'll need to do this through a shortcut like lowering the lifetime or adding a killplane, but we'd want this to look right for all three faucets tables. We can do this through properties.  
+A visual effect's property is similar to a serialised field in a script. It can be a different value for every instance of the effect and can therefore be used to differentiate our effects for our three faucets.  
 Go back to the visual effect graph, and click the plus sign in the top left. Navigate to property and then click plane. Let's name our new property "floorHeight".  
 We'll now add a new block to our update context called "Kill Shape Plane".  
-Click the little white notch on your kill shape block and drag it to the left. In the popup, select Property/Floor Height.  
+Click the little white notch on your kill shape block and drag it to the left. In the popup, select Property -> Floor Height.  
 Your visual effect will now have a property representing a plane, that is different for every instance of the effect, and if your particles collide with this plane they will despawn.  
 Go back to the scene view of the faucet scene, and select one of the faucet's "Leaky visual" object in the object hierarchy. In the "Gizmos" dropdown, you can now select your floor height property, and adjust its height using the scene view's movement tools.  
 Repeat this for the other two faucets. Notice how their properties are all distinct from eachother. Designing your visual effects like this will be much appreciated by the level designers.  
