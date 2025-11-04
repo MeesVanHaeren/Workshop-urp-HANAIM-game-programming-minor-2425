@@ -11,4 +11,4 @@ Folders:
 
 ## Step 1
 Make a Lit Shader Graph like in the screen below.
-![image](files://ReadmeImages//1.png)
+![Create a Shader Graph](ReadmeImages/1.png)
