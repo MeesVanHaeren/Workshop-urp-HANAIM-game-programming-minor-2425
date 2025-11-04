@@ -42,7 +42,7 @@ An orient camera plane block in output will always make your particles face the 
 ### "-That fall down due to gravity-"
 Let's make our particles move. The Update context in our graph is called every frame to handle dynamic aspects of our particles, like movement or things that have to happen over time.  
 If we add a "Gravity" block to our update context our particles will fall forever.  
-If we navigate to our prefab again you might be able to see them move for a second, and then never come back. You can retrigger this through the visual effect gizmo. Why is that?  
+If we navigate to our prefab again you might be able to see it spawn exactly ten droplets, and then never come back. You can only retrigger this by restarting the effect through the visual effect gizmo. Why is that?  
 ### "-And disappear after a while"
 If we recall from earlier, our particles can never exceed our capacity. Currently our capacity is 10, so our effect will spawn 10 particles and then be prohibited from spawning any more.  
 Usually particles have a short lifespan to despawn them after they have done their thing, currently our particles have none so they will linger for very long.  
